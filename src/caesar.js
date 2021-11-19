@@ -36,7 +36,7 @@ const caesarModule = (function () {
             result += String.fromCharCode(codeval + shift);
           }
         } else {
-          result += code.charAt(i); //for ascii characters not within a to z just copy them
+          result += codeval; //for ascii characters not within a to z just copy them
         }
       }
       return result;
