@@ -6,3 +6,4 @@ It is our first capstone project. We are creating a "decoder ring" using three d
 1. The Substitution Cypher where the entire alphabet is substituted with a different one, such that each letter has a pottentially different letter mapped to it
 
 This is an individual project that we are doing. We are helping each others in small teams though. It is one of my first bigger projects I will have written.
+I wrote the files in the src directory, the rest were provided for me.
