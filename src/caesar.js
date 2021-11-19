@@ -11,13 +11,13 @@ const caesarModule = (function () {
     // input is code to be shifted
     // shift is ammount code is to be shifted or ammount to shift back
     // when encode ===false flip sign of shift
-    try{
-      if (encode === false){
-        shift = shift * -1;
-      }
+    try{      
       if( shift > 25 || shift < 26 || shift === 0){
         throw "Invalid shift ammount"
-      }        
+      }
+      if (encode === false){
+        shift = shift * -1;
+      }       
       const result = input.toLowerCase();
       for(let i = 0; i < result.length; i++){
         if(result >= 97 && result <= 122){
