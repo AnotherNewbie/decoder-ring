@@ -5,41 +5,41 @@
 
 const polybiusModule = (function () {
   // you can add any code you want within this function scope
-  function encoder(input){
+  function encoder(input) {
     const orig = input.toLowerCase();
     let code = "";
-    for(let i = 0; i < orig.length; i++){
-      switch(orig.charAt(i)){
+    for (let i = 0; i < orig.length; i++) {
+      switch (orig.charAt(i)) {
         case "a":
-          code +="11";
+          code += "11";
           break;
         case "b":
-          code +="21";
+          code += "21";
           break;
         case "c":
-          code +="31";
+          code += "31";
           break;
         case "d":
-          code +="41";
+          code += "41";
           break;
         case "e":
-          code +="51";
+          code += "51";
           break;
         case "f":
-          code +="12";
+          code += "12";
           break;
         case "g":
-          code +="22";
+          code += "22";
           break;
         case "h":
-          code +="32";
+          code += "32";
           break;
         case "i":
         case "j":
-          code +="42";
+          code += "42";
           break;
         case "k":
-          code +="52";
+          code += "52";
           break;
         case "l":
           code += "13";
@@ -75,7 +75,7 @@ const polybiusModule = (function () {
           code += "15";
           break;
         case "w":
-          code += "25"
+          code += "25";
           break;
         case "x":
           code += "35";
@@ -88,30 +88,30 @@ const polybiusModule = (function () {
           break;
         default:
           code += " ";
-          break;          
+          break;
       }
     }
     return code;
-  }  
+  }
 
-  function decoder(input){
+  function decoder(input) {
     const code = input;
     let orig = "";
-    
-    let lengthCheck = code.split(' ');
+
+    let lengthCheck = code.split(" ");
     let newLengthCheck = "";
-    
+
     //checking for even number of characters excluding spaces
-    for(let i = 0; i < lengthCheck.length; i++){
-      newLengthCheck +=lengthCheck[i];
+    for (let i = 0; i < lengthCheck.length; i++) {
+      newLengthCheck += lengthCheck[i];
     }
-    if (newLengthCheck.length % 2 != 0){      
+    if (newLengthCheck.length % 2 != 0) {
       return false;
     }
 
-    for(let i = 0; i < code.length; i++){      
-      switch(code.slice(i,i+2)){
-        case "11":          
+    for (let i = 0; i < code.length; i++) {
+      switch (code.slice(i, i + 2)) {
+        case "11":
           orig += "a";
           i++;
           break;
@@ -211,19 +211,19 @@ const polybiusModule = (function () {
           orig += "z";
           i++;
           break;
-        default:          
+        default:
           orig += " ";
           break;
       }
-    }    
-    return orig;        
+    }
+    return orig;
   }
 
   function polybius(input, encode = true) {
     // your solution code here
-    if(!encode){
+    if (!encode) {
       return decoder(input);
-    }else{
+    } else {
       return encoder(input);
     }
   }
