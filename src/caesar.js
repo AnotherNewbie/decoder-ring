@@ -13,7 +13,7 @@ const caesarModule = (function () {
     // when encode ===false flip sign of shift
     try{      
       if( shift > 25 || shift < -25 || shift === 0 || !shift ){
-        throw "Invalid shift ammount"
+        throw "Invalid shift amount"
       }
       if (encode === false){
         shift = shift * -1;
