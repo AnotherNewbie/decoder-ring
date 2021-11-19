@@ -5,4 +5,4 @@ It is our first capstone project. We are creating a "decoder ring" using three d
 1. The Polybius Square where each letter is converted into a two digit code based on putting the letters on a grid
 1. The Substitution Cypher where the entire alphabet is substituted with a different one, such that each letter has a pottentially different letter mapped to it
 
-This is an individual project that we are doing. We are helping each others in small teams though. It is one of my first biger projects I will have written.
+This is an individual project that we are doing. We are helping each others in small teams though. It is one of my first bigger projects I will have written.
