@@ -6,6 +6,7 @@
 const substitutionModule = (function () {
   // you can add any code you want within this function scope
   function encoder(input, alphabet) {
+    //object to use to encode message
     let subObj = {
       a: alphabet.charAt(0),
       b: alphabet.charAt(1),
@@ -35,6 +36,7 @@ const substitutionModule = (function () {
       z: alphabet.charAt(25),
     };
     let encodedMsg = "";
+    // goes through input and encodes it
     for (let i = 0; i < input.length; i++) {
       if (input.charAt(i) === " ") {
         encodedMsg += " ";
@@ -46,6 +48,8 @@ const substitutionModule = (function () {
   }
 
   function decoder(input, alphabet) {
+
+    //object to use to decode message
     let subObj = {
       a: alphabet.charAt(0),
       b: alphabet.charAt(1),
@@ -75,7 +79,7 @@ const substitutionModule = (function () {
       z: alphabet.charAt(25),
     };
     let dencodedMsg = "";
-
+    //goes through input and decodes it
     for (let i = 0; i < input.length; i++) {
       if (input.charAt(i) === " ") {
         dencodedMsg += " ";
