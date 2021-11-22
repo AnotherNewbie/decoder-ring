@@ -11,6 +11,11 @@ describe("polybius() tests written by Me", () => {
         });
     });
     // only spaces and characters
+        it("should contain only spaces and characters", ()=> {
+            const message = "a1b^"
+            const actual = polybius(message);
+            expect(actual).to.be.false;
+        });
     describe("encoding",() => {
     // spaces must be maintained througout
     });

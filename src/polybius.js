@@ -87,9 +87,11 @@ const polybiusModule = (function () {
         case "z":
           code += "55";
           break;
-        default:
+        case " ":
           code += " ";
           break;
+        default:          
+          return false;          
       }
     }
     return code;
@@ -108,7 +110,7 @@ const polybiusModule = (function () {
     }
     if (newLengthCheck.length % 2 != 0) {
       return false;
-    }
+    }    
     // switch statement to decode with
     for (let i = 0; i < code.length; i++) {
       switch (code.slice(i, i + 2)) {
@@ -213,7 +215,11 @@ const polybiusModule = (function () {
           i++;
           break;
         default:
-          orig += " ";
+          if(code.charAt(i) === " "){
+            orig += " ";
+          } else {
+            return false;
+          }
           break;
       }
     }
