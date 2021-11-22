@@ -9,6 +9,7 @@ const polybiusModule = (function () {
     const orig = input.toLowerCase();
     let code = "";
     for (let i = 0; i < orig.length; i++) {
+      //statement used to encode 
       switch (orig.charAt(i)) {
         case "a":
           code += "11";
@@ -108,7 +109,7 @@ const polybiusModule = (function () {
     if (newLengthCheck.length % 2 != 0) {
       return false;
     }
-
+    // switch statement to decode with
     for (let i = 0; i < code.length; i++) {
       switch (code.slice(i, i + 2)) {
         case "11":
