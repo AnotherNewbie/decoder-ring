@@ -36,7 +36,11 @@ const substitutionModule = (function () {
     };
     let encodedMsg = "";
     for(let i = 0; i < input.length; i++){
-      encodedMsg += subObj[input.charAt(i)];
+      if(input.charAt(i) === " "){
+        encodedMsg += " ";
+      }else {
+        encodedMsg += subObj[input.charAt(i)];
+      }
     }
     return encodedMsg;
   }
