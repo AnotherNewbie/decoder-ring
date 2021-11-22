@@ -8,8 +8,7 @@ describe("polybius() tests written by Me", () => {
             const message = "111 "
             const actual = polybius(message, false);
             expect(actual).to.be.false;
-        });
-    });
+        });    
     // only spaces and characters
         it("should contain only spaces and characters while encoding", ()=> {
             const message = "a1b^ "
@@ -22,6 +21,7 @@ describe("polybius() tests written by Me", () => {
             const actual = polybius(message, false);
             expect(actual).to.be.false;
         });
+    });
     describe("encoding",() => {
     // spaces must be maintained througout
         it("should maintain spaces in encoding",() => {
@@ -46,8 +46,7 @@ describe("polybius() tests written by Me", () => {
             const actual = polybius(code, false);
             expect(actual).to.eql(message);
         });
-    // letter i&j are both 42 but when decoding should show i/j for 42
-    });
+    // letter i&j are both 42 but when decoding should show i/j for 42    
         it("should decode 42 as i/j", ()=>{
             const code = "42";
             const message = "i/j";
@@ -55,6 +54,5 @@ describe("polybius() tests written by Me", () => {
             expect(actual).to.eql(message);
 
         });
-
-
+    });
 });
