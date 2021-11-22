@@ -30,6 +30,13 @@ describe("polybius() tests written by Me", () => {
             const actual = polybius(message);
             expect(actual).to.eql(code);
         });        
+        // letter i&j are both 42 but when decoding should show i/j for 42
+        it("should encode i or j as 42", ()=>{
+            const message = "ij";
+            const code = "4242";
+            const actual = polybius(message);
+            expect(actual).to.eql(code);
+        });
     });
     describe("decoding", () => {
     // spaces must be maintained througout
@@ -41,7 +48,13 @@ describe("polybius() tests written by Me", () => {
         });
     // letter i&j are both 42 but when decoding should show i/j for 42
     });
-    
+        it("should decode 42 as i/j", ()=>{
+            const code = "42";
+            const message = "i/j";
+            const actual = polybius(code, false);
+            expect(actual).to.eql(message);
+
+        });
 
 
 });
