@@ -24,9 +24,21 @@ describe("polybius() tests written by Me", () => {
         });
     describe("encoding",() => {
     // spaces must be maintained througout
+        it("should maintain spaces in encoding",() => {
+            const message = "a b";
+            const code = "11 21"
+            const actual = polybius(message);
+            expect(actual).to.eql(code);
+        });        
     });
     describe("decoding", () => {
     // spaces must be maintained througout
+        it("should maintain spaces in decoding", ()=>{
+            const message = "a b";
+            const code = "11 21"
+            const actual = polybius(code, false);
+            expect(actual).to.eql(message);
+        });
     // letter i&j are both 42 but when decoding should show i/j for 42
     });
     
