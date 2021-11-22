@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { substitution } = require("../src/substitution");
 // Write your tests here!
-describe("substitution tests written by me", () => {
+describe("substitution() tests written by me", () => {
   describe("error handling", () => {});
 
   describe("encoding", () => {
