@@ -45,7 +45,7 @@ const substitutionModule = (function () {
     return encodedMsg;
   }
 
-  function decoder (input, alphabet) {
+  function decoder (input, alphabet) {    
     let subObj = {
       "a": alphabet.charAt(0),
       "b": alphabet.charAt(1),
