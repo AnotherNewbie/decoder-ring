@@ -104,19 +104,19 @@ const substitutionModule = (function () {
     }
     input.toLowerCase();
     alphabet.toLowerCase();
-    //check that all alphabet characters are unique alphabet characters
+    //check that all alphabet characters are unique alphabet characters    
     for (let i = 0; i < 26; i++) {
       let max = 0;
-      for (let j = 0; j < 26; j++) {
-        if (alphabet.charAt(j) === String.fromCharCode(97 + i)) {
+      for (let j = 0; j < 26 ; j++) {
+        if(alphabet[i] === alphabet[j]){
           max++;
-        }
+        }        
       }
-      if (max > 1) {
+      if(max > 1){
         return false;
       }
     }
-    
+
     if (encode) {
       return encoder(input, alphabet);
     } else if (!encode) {
