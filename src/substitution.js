@@ -79,19 +79,19 @@ const substitutionModule = (function () {
       y: alphabet.charAt(24),
       z: alphabet.charAt(25),
     };
-    let dencodedMsg = "";
+    let decodedMsg = "";
     //goes through input and decodes it
     for (let i = 0; i < input.length; i++) {
       //tests if character is a space, if not decodes it
       if (input.charAt(i) === " ") {
-        dencodedMsg += " ";
+        decodedMsg += " ";
       } else {
-        dencodedMsg += Object.keys(subObj).find(
+        decodedMsg += Object.keys(subObj).find(
           (key) => subObj[key] === input.charAt(i)
         );
       }
     }
-    return dencodedMsg;
+    return decodedMsg;
   }
 
   function substitution(input, alphabet, encode = true) {
