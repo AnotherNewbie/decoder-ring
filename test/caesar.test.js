@@ -15,22 +15,22 @@ describe("caesar() submission tests written by me", () => {
       const shift = -26;
       const actual = caesar(message, shift);
       expect(actual).to.be.false;
-    });    
+    });
   });
   describe("encoding tests", () => {
-      it("should maintain characters other than alphanumerics", () => {
-        const message  = "123 !"
-        const shift = 1;
-        const actual = caesar(message, shift);
-        expect(actual).to.eql(message);
-      });
+    it("should maintain characters other than alphanumerics", () => {
+      const message = "123 !";
+      const shift = 1;
+      const actual = caesar(message, shift);
+      expect(actual).to.eql(message);
+    });
   });
   describe("decoding tests", () => {
     it("should maintain characters other than alphanumerics", () => {
-        const message  = "123 !"
-        const shift = 1;
-        const actual = caesar(message, shift, false);
-        expect(actual).to.eql(message);
+      const message = "123 !";
+      const shift = 1;
+      const actual = caesar(message, shift, false);
+      expect(actual).to.eql(message);
     });
   });
 });
