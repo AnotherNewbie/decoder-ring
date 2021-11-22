@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { polybius } = require("../src/polybius");
 // Write your tests here!
-describe("polybius() tests written by Me", () => {
+describe("polybius() tests written by me", () => {
     describe("error handling", ()=>{
     // numer of characters in the string should be even, excluding spaces when decoding
         it("should return false if the string has odd characters, excluding spaces",() => {

@@ -1,6 +1,6 @@
 const { expect } = require("chai");
 const { caesar } = require("../src/caesar");
-describe("caesar() submission tests written by Me", () => {
+describe("caesar() submission tests written by me", () => {
   // Write your tests here!
   // test for greater than 25 should return false
   describe("error handling", () => {
