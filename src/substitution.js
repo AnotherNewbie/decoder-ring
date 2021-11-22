@@ -74,7 +74,16 @@ const substitutionModule = (function () {
       "y": alphabet.charAt(24),
       "z": alphabet.charAt(25)
     };
-    return;
+    let dencodedMsg = "";
+
+    for(let i = 0; i < input.length; i++){
+      if(input.charAt(i) === " "){
+        dencodedMsg += " ";
+      }else {
+        dencodedMsg += Object.keys(subObj).find(key => subObj[key] === input.charAt(i));
+      }
+    }
+    return dencodedMsg;
   }
 
   function substitution(input, alphabet, encode = true) {
