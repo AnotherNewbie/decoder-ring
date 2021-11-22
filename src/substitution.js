@@ -104,6 +104,7 @@ const substitutionModule = (function () {
     }
     input.toLowerCase();
     alphabet.toLowerCase();
+    //check that all alphabet characters are unique alphabet characters
     for (let i = 0; i < 26; i++) {
       let max = 0;
       for (let j = 0; j < 26; j++) {
@@ -115,6 +116,7 @@ const substitutionModule = (function () {
         return false;
       }
     }
+    
     if (encode) {
       return encoder(input, alphabet);
     } else if (!encode) {
