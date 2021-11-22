@@ -78,8 +78,26 @@ const substitutionModule = (function () {
   }
 
   function substitution(input, alphabet, encode = true) {
+    input.toLowerCase();
+    alphabet.toLowerCase();
     // your solution code here
-
+    if (!alphabet){
+      return false;
+    }
+    if(alphabet.length !== 26){
+      return false;
+    }
+    for(let i = 0; i < 26; i++){
+      let max = 0;
+      for(let j = 0; j < 26; j++){
+        if(alphabet.charAt(j)===String.fromCharCode(97+i)){
+          max++;
+        }
+      }
+      if (max > 1){
+        return false;
+      }
+    }
     if (encode){
       return encoder(input, alphabet);
     }else if (!encode){
