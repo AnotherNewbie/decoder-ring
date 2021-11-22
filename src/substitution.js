@@ -38,6 +38,7 @@ const substitutionModule = (function () {
     let encodedMsg = "";
     // goes through input and encodes it
     for (let i = 0; i < input.length; i++) {
+      //tests if character is a space if not encodes it
       if (input.charAt(i) === " ") {
         encodedMsg += " ";
       } else {
@@ -81,6 +82,7 @@ const substitutionModule = (function () {
     let dencodedMsg = "";
     //goes through input and decodes it
     for (let i = 0; i < input.length; i++) {
+      //tests if character is a space, if not decodes it
       if (input.charAt(i) === " ") {
         dencodedMsg += " ";
       } else {
