@@ -26,11 +26,11 @@ const caesarModule = (function () {
           // check that the ascii is within a-z
           if (codeval + shift < 97) {
             // check to see if the shift will make it less than a
-            shift = shift + 26; //  roll over shift change to make it start at z
+            shift += 26; //  roll over shift change to make it start at z
             result += String.fromCharCode(codeval + shift);
           } else if (codeval + shift > 122) {
             //check to see if shift is greater than z
-            shift = shift - 26; // roll over shift to start at a
+            shift -= 26; // roll over shift to start at a
             result += String.fromCharCode(codeval + shift);
           } else {
             result += String.fromCharCode(codeval + shift);
